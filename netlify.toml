@@ -1,43 +1,6 @@
-functionsDirectory = "C:\\Users\\Admin\\Desktop\\ggx\\netlify\\functions"
-functionsDirectoryOrigin = "config"
-redirectsOrigin = "config"
-plugins = []
-headers = []
-
 [build]
-publish = "C:\\Users\\Admin\\Desktop\\ggx\\dist"
-publishOrigin = "config"
-commandOrigin = "config"
-command = "npm run build"
-functions = "C:\\Users\\Admin\\Desktop\\ggx\\netlify\\functions"
-
-  [build.environment]
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
+  publish = "."
+  functions = "netlify/functions"
 
 [functions]
-
-  [functions."*"]
   node_bundler = "esbuild"
-
-[[redirects]]
-from = "/api/leads"
-to = "/.netlify/functions/leads"
-status = 200
-force = true
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
